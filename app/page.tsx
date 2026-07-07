@@ -5,7 +5,7 @@ import { Plane, GraduationCap, FileCheck, Home, ShieldCheck, Phone, Mail, ArrowR
 import './page.css';
 
 /* ---------- helper: reveal-on-scroll ---------- */
-function useReveal(): [React.RefObject<HTMLDivElement>, boolean] {
+function useReveal(): [React.RefObject<HTMLDivElement | null>, boolean] {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
